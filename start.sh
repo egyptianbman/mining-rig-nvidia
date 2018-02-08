@@ -4,10 +4,14 @@ session_name="rig1"
 
 base=~/gpu
 
-sudo bash -c "X :1&"
+if [[ "35" -gt "$(nvidia-smi | wc -l)" ]]; then
+    sudo reboot
+fi
 
 sudo su -c 'echo "performance" >/sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 sudo su -c 'echo 2800000 > /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq'
+
+sudo bash -c "X :1&"
 
 # Use this to start one instance of the miner for all of the gpus
 # if [ -z "$(tmux ls | grep ${session_name})" ]
