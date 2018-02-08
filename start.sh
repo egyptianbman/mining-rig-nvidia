@@ -32,27 +32,27 @@ then
 
     # Create left and right
     tmux split-window -h -c ${base}/
-    tmux send-keys "sleep 3 && minedev 1" C-m
+    tmux send-keys "sleep 8 && minedev 1" C-m
 
     tmux select-window -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "sleep 15 && minedev 5" C-m
+    tmux send-keys "sleep 20 && minedev 5" C-m
 
     tmux select-pane -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "sleep 12 && minedev 4" C-m
+    tmux send-keys "sleep 17 && minedev 4" C-m
 
     tmux select-pane -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "sleep 6 && minedev 2" C-m
+    tmux send-keys "sleep 11 && minedev 2" C-m
 
     tmux select-pane -t 3
     tmux split-window -v -t 3 -c ${base}/
-    tmux send-keys "sleep 9 && minedev 3" C-m
+    tmux send-keys "sleep 14 && minedev 3" C-m
 
     tmux select-pane -t 2
     tmux split-window -v -t 2 -c ${base}/
-    tmux send-keys "sleep 18 && minedev 6" C-m
+    tmux send-keys "sleep 23 && minedev 6" C-m
 
     tmux select-pane -t 6
     tmux split-window -v -t 6 -c ${base}/
