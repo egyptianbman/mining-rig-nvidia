@@ -2,7 +2,7 @@
 
 session_name="rig1"
 
-base="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+base=~/gpu
 
 sudo bash -c "X :1&"
 
@@ -32,31 +32,31 @@ then
 
     # Create left and right
     tmux split-window -h -c ${base}/
-    tmux send-keys "minedev 1" C-m
+    tmux send-keys "sleep 3 && minedev 1" C-m
 
     tmux select-window -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "minedev 5" C-m
+    tmux send-keys "sleep 15 && minedev 5" C-m
 
     tmux select-pane -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "minedev 4" C-m
+    tmux send-keys "sleep 12 && minedev 4" C-m
 
     tmux select-pane -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "minedev 2" C-m
+    tmux send-keys "sleep 6 && minedev 2" C-m
 
     tmux select-pane -t 3
     tmux split-window -v -t 3 -c ${base}/
-    tmux send-keys "minedev 3" C-m
+    tmux send-keys "sleep 9 && minedev 3" C-m
 
     tmux select-pane -t 2
     tmux split-window -v -t 2 -c ${base}/
-    tmux send-keys "minedev 6" C-m
+    tmux send-keys "sleep 18 && minedev 6" C-m
 
     tmux select-pane -t 6
     tmux split-window -v -t 6 -c ${base}/
-    tmux send-keys "${base}/overclock.sh && ${base}/fans.sh" C-m
+    tmux send-keys "${base}/autoclock.sh && ${base}/fans.sh" C-m
 
     # tmux split-window -v -t 6 -c ${base}/myshare
     # tmux send-keys "sudo ./myshare t1QRKvmE5pGXahcadDWmt4qPknwEkV5yUqQ" C-m

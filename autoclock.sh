@@ -24,8 +24,8 @@ STOP_MEM=2500
 # This function is used to test if the gpu is stll mining. Grep for the mining
 # process and return a count of the running threads.
 function checkGpuMining() {
-    # threads="$(ps aux | grep "dev ${1}" | grep zm | wc -l)"
-    threads="$(ps aux | grep "devices ${1}" | grep bminer | wc -l)"
+    threads="$(ps aux | grep "dev ${1}" | grep zm | wc -l)"
+    # threads="$(ps aux | grep "devices ${1}" | grep bminer | wc -l)"
 }
 
 # THis funciton notifies upon failure. Be sure to update the discord url with
