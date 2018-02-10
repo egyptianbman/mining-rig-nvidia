@@ -10,7 +10,7 @@ fi
 
 cd ${base}
 
-docker-compose rm;
+docker-compose rm -f;
 
 sudo su -c 'echo "performance" >/sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 sudo su -c 'echo 2800000 > /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq'
