@@ -32,7 +32,7 @@ while true; do
             reset_speed ${gpu} ${current_temp}
         fi
     done
-    sleep 90
+    sleep 30
     echo '                           '
     echo '---------------------------'
 done
