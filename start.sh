@@ -40,23 +40,23 @@ then
 
     tmux select-window -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "sleep 35 && minedev 5" C-m
+    tmux send-keys "sleep 55 && minedev 5" C-m
 
     tmux select-pane -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "sleep 30 && minedev 4" C-m
+    tmux send-keys "sleep 45 && minedev 4" C-m
 
     tmux select-pane -t 0
     tmux split-window -v -c ${base}/
-    tmux send-keys "sleep 20 && minedev 2" C-m
+    tmux send-keys "sleep 25 && minedev 2" C-m
 
     tmux select-pane -t 3
     tmux split-window -v -t 3 -c ${base}/
-    tmux send-keys "sleep 25 && minedev 3" C-m
+    tmux send-keys "sleep 35 && minedev 3" C-m
 
     tmux select-pane -t 2
     tmux split-window -v -t 2 -c ${base}/
-    tmux send-keys "sleep 40 && minedev 6" C-m
+    tmux send-keys "sleep 65 && minedev 6" C-m
 
     tmux select-pane -t 6
     tmux split-window -v -t 6 -c ${base}/
