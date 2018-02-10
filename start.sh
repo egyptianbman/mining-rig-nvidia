@@ -8,6 +8,10 @@ if [[ "35" -gt "$(nvidia-smi | wc -l)" ]]; then
     sudo reboot
 fi
 
+cd ${base}
+
+docker-compose rm;
+
 sudo su -c 'echo "performance" >/sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 sudo su -c 'echo 2800000 > /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq'
 
