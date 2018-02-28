@@ -39,3 +39,16 @@ int SSL_write(SSL *ssl, const void *buf, int num) {
     }
     return g_ssl_write(ssl, buf, num);
 }
+
+/**
+ * Code:
+ * gcc fix.c -std=gnu99 -shared -o fix.so
+ * or if that didn't work:
+
+ * Code:
+ * gcc fix.c -std=gnu99 -shared -fPIC -o fix.so
+
+ * Use
+ * Code:
+ * LD_PRELOAD=/absolute/path/to/the/fix.so ./zm <standard-arguments-you-typically-give-to-it>
+ */
